@@ -1,0 +1,936 @@
+{
+  "intents": [
+    {
+      "intent": "الشركة",
+      "examples": [
+        {
+          "text": "كيف اقدر اتابعهم بالسوشل ميديا"
+        },
+        {
+          "text": "ما هو شعار الشركة"
+        },
+        {
+          "text": "وش اسم الشركة؟"
+        },
+        {
+          "text": "ما الشركة المنتجة للوحة التحكم؟"
+        },
+        {
+          "text": "مين سوا الشغل؟"
+        },
+        {
+          "text": "الشغل من اشراف اي شركة؟"
+        },
+        {
+          "text": "ايش اسم الشركة اللي سوت الشغل ذا؟"
+        },
+        {
+          "text": "ما الشركة المنتجة للخريطة التحكم بالروبوت؟"
+        }
+      ],
+      "description": "إجابة عن الأسئلة المتعلقة  بالشركة المنتجة "
+    },
+    {
+      "intent": "التحية",
+      "examples": [
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "هاي"
+        },
+        {
+          "text": "سلام"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "صباح الخير"
+        },
+        {
+          "text": "مساء الخير"
+        },
+        {
+          "text": "هلا"
+        },
+        {
+          "text": "هيلو"
+        }
+      ],
+      "description": "الرد على مختلف مفردات التحية سواءا باللغة العامية أو الفصحى"
+    },
+    {
+      "intent": "شكر",
+      "examples": [
+        {
+          "text": "جزاك الله خيرا"
+        },
+        {
+          "text": "باي"
+        },
+        {
+          "text": "إلى اللقاء"
+        },
+        {
+          "text": "لا"
+        },
+        {
+          "text": "يعطيك العافية"
+        },
+        {
+          "text": "مع السلامة"
+        },
+        {
+          "text": "لاحقا"
+        },
+        {
+          "text": "شكرا"
+        }
+      ],
+      "description": "إنهاء المحادثة"
+    },
+    {
+      "intent": "لوحة_التحكم",
+      "examples": [
+        {
+          "text": "وش ذي الأزرار؟"
+        },
+        {
+          "text": "ما الغرض من لوحة التحكم؟"
+        },
+        {
+          "text": "البوتن وش تسوي؟"
+        },
+        {
+          "text": "أريد أن أسأل عن الأزرار"
+        }
+      ],
+      "description": "الجواب على أسئلة تتعلق عن لوحة التحكم"
+    },
+    {
+      "intent": "حجز",
+      "examples": [
+        {
+          "text": "أبغى أزوركم في موقعكم"
+        },
+        {
+          "text": "هل يمكنني الحجز لزيارة موقع شركة الأساليب الذكية؟"
+        },
+        {
+          "text": "متى يمكنني زيارة الشركة؟"
+        },
+        {
+          "text": "4"
+        },
+        {
+          "text": "4:00"
+        },
+        {
+          "text": "هل يمكنني حجز موعد مع المسؤول في الشركة؟"
+        },
+        {
+          "text": "يمديني اسوي حجز؟"
+        }
+      ],
+      "description": "حجز موعد مع الشركة المنتجة للعمل"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "الشركة",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "تواصل اجتماعي",
+          "synonyms": [
+            "تويتر",
+            "انستغرام",
+            "ميديا",
+            "twitter",
+            "instagram",
+            "الصفحة الرئيسية للموقع",
+            "التواصل",
+            "website",
+            "موقع الويب",
+            "الفيسبوك",
+            "ويب",
+            "انستا",
+            "سوشل"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "موقع",
+          "synonyms": [
+            "مكان الشركة",
+            "مكانها",
+            "اللوكيشن"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "الاسم",
+          "synonyms": [
+            "إشراف",
+            "إنتاج",
+            "إخراج",
+            "المخرج",
+            "المشرف",
+            "اسمها",
+            "المنتج",
+            "اسم"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "شعار",
+          "synonyms": [
+            "Logo",
+            "لوغو",
+            "لوجو",
+            "صورة",
+            "شعارها"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "الغاية",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "الغاية",
+          "synonyms": [
+            "الهدف",
+            " النفع",
+            "الغرض",
+            "الفائدة",
+            "بشكل عام",
+            "عموما"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "الأمام",
+          "synonyms": [
+            "Forward"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "توقف",
+          "synonyms": [
+            "وقف",
+            "Stop"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "الخلف",
+          "synonyms": [
+            "Backward",
+            "ورا",
+            "وراء"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "اليسار",
+          "synonyms": [
+            "Leftward",
+            "يسار",
+            "Left",
+            "غرب"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "اليمين",
+          "synonyms": [
+            "يمين",
+            "شرق",
+            "Rightward",
+            "Right"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "برمجة",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "لغات",
+          "synonyms": [
+            "لغة",
+            "البرمجة",
+            "تصميم"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "parent": "node_10_1595803327041",
+      "variable": "$number",
+      "dialog_node": "slot_9_1595844226873",
+      "previous_sibling": "slot_2_1595803410241"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1595803327041",
+      "variable": "$time",
+      "dialog_node": "slot_5_1595803365770",
+      "previous_sibling": "handler_1_1595803548250"
+    },
+    {
+      "type": "slot",
+      "parent": "node_10_1595803327041",
+      "variable": "$date",
+      "dialog_node": "slot_2_1595803410241",
+      "previous_sibling": "slot_5_1595803365770"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " أحتاج إلى معلومات إضافية لإكمال حجزك، سوف أحتاج إلى التاريخ، الوقت المناسبين لك، إضافة إلى عدد الأشخاص الحاضرين للزيارة."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1595803327041",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1595803548250"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "ما اليوم المناسب بالنسبة لك للقيام بالحجز؟"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1595803410241",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1595803410245",
+      "previous_sibling": "handler_5_1595803410245"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1595803410241",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_5_1595803410245"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "شعار الأساليب الذكية",
+            "source": "https://pbs.twimg.com/profile_images/1227354839631433730/NhRCC1W__400x400.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:شعار",
+      "dialog_node": "response_1_1595803893449",
+      "previous_sibling": "response_8_1595803884136"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " بالتأكيد! يمكنني إخبارك باسم الشركة، عرض صورة لشعارها، روابط التواصل الاجتماعي الخاص بالشركة، إضافة إلى موقع الشركة بخرائط قوقل."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "true",
+      "dialog_node": "response_8_1595848405966",
+      "previous_sibling": "response_1_1595803893449"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "\nالمملكة العربية السعودية - مكة المكرمة المركز الرئيسي - بطحاء قريش - الشارع العام -مبنى المدعى - مكتب رقم سبعة فرع المبيعات - المسفلة - شارع الكنكارية - برج أفواج التوبة -معرض 4 فرع الاستقبال -وادي مكة - مبنى الشركات -مكتب رقم 6 سي\nhttps://www.google.com.sa/maps/place/BaMakraman/@21.311625,39.6997676,15z/data=!4m5!3m4!1s0x0:0x9f6f4e4bccb7ec39!8m2!3d21.311625!4d39.6997676?hl=en"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:موقع",
+      "dialog_node": "response_3_1595803792249",
+      "previous_sibling": "response_3_1595803789331"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "                                                                                                                               : يمكنك التواصل مع الشركة عن طريق \n                                                                                  https://www.s-m.com.sa/ :الصفحة الرئيسية للموقع الإلكتروني\n                                                                         https://www.facebook.com/SmartMethods/  :صفحة الفيسبوك \n                                                                                                       https://twitter.com/smart_methods :توتير "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:(تواصل اجتماعي)",
+      "dialog_node": "node_9_1595804597918",
+      "previous_sibling": "node_7_1595804506648"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "title": "شعار الأساليب الذكية",
+            "source": "https://pbs.twimg.com/profile_images/1227354839631433730/NhRCC1W__400x400.jpg",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:شعار",
+      "dialog_node": "node_2_1595804689054",
+      "previous_sibling": "node_9_1595804597918"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "اسم الشركة هو الأساليب الذكية"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:الاسم",
+      "dialog_node": "response_3_1595803789331",
+      "previous_sibling": "node_2_1595804689054"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "المملكة العربية السعودية - مكة المكرمة المركز الرئيسي - بطحاء قريش - الشارع العام - مبنى المدعى - مكتب رقم سبعة فرع المبيعات-المسفلة - شارع الكنكارية -برج أفواج التوبة -معرض 4 فرع الاستقبال - وادي مكة - مبنى الشركات - مكتب رقم 6 سي   "
+              },
+              {
+                "text": " موقع الشركة: https://www.google.com.sa/maps/place/BaMakraman/@21.311625,39.6997676,15z/data=!4m5!3m4!1s0x0:0x9f6f4e4bccb7ec39!8m2!3d21.311625!4d39.6997676?hl=en "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:موقع",
+      "dialog_node": "node_7_1595804506648",
+      "previous_sibling": "node_10_1595804463291"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "                                                                                                                           : يمكنك التواصل مع الشركة عن طريق                                                                                \n                                                                               https://www.s-m.com.sa/ :الصفحة الرئيسية للموقع الإلكتروني                                                                      \n                                                                      https://www.facebook.com/SmartMethods/  :صفحة الفيسبوك                                                                                                    \n                                                                                                   https://twitter.com/smart_methods :توتير "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:(تواصل اجتماعي)",
+      "dialog_node": "response_8_1595803884136",
+      "previous_sibling": "response_3_1595803792249"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "اسم الشركة هو الاساليب الذكية"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1595803750615",
+      "conditions": "@الشركة:الاسم",
+      "dialog_node": "node_10_1595804463291"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "ما عدد الأشخاص الحاضرين لزيارة موقع الشركة؟"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1595844226873",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1595844226886",
+      "previous_sibling": "handler_8_1595844226886"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1595844226873",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1595844226886"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الهدف من زر(Rightward) هو تحريك الروبوت المتصل بلوحة التحكم إلى اليمين وذلك عند الضغط عليه"
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1595803617777",
+      "conditions": "@الغاية:اليمين",
+      "dialog_node": "response_4_1595850444555",
+      "previous_sibling": "response_8_1595850435613"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الهدف من زر(Backward) هو تحريك الروبوت المتصل بلوحة التحكم إلى الخلف وذلك عند الضغط عليه"
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1595803617777",
+      "conditions": "@الغاية:الخلف",
+      "dialog_node": "response_8_1595850435613",
+      "previous_sibling": "response_5_1595850412432"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الهدف من زر(Forward) هو تحريك الروبوت المتصل بلوحة التحكم إلى الأمام وذلك عند الضغط عليه"
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1595803617777",
+      "conditions": "@الغاية:الأمام",
+      "dialog_node": "response_6_1595850457277",
+      "previous_sibling": "response_4_1595850444555"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الهدف من لوحة التحكم بشكل عام هو التحكم اتجاهات حركة الروبوت سواءًا أكان ذلك للأمام، للخلف،لليمين، لليسار، أم لوقف حركته وذاك عن طريق الضغط على الأزرار"
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1595803617777",
+      "conditions": "@الغاية:الغاية",
+      "dialog_node": "response_4_1595852838031",
+      "previous_sibling": "response_6_1595850457277"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الهدف من زر(Stop) هو وقف حركة الروبوت المتصل بلوحة التحكم "
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1595803617777",
+      "conditions": "@الغاية:توقف",
+      "dialog_node": "response_5_1595850412432",
+      "previous_sibling": "response_6_1595850402114"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الهدف من زر(Leftward) هو تحريك الروبوت المتصل بلوحة التحكم إلى اليسار وذلك عند الضغط عليه"
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1595803617777",
+      "conditions": "@الغاية:اليسار",
+      "dialog_node": "response_6_1595850402114"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "ما الوقت المناسب بالنسبة لك ؟"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1595803365770",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1595803365790",
+      "previous_sibling": "handler_4_1595803365790"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1595803365770",
+      "context": {
+        "time": "@sys-time"
+      },
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_4_1595803365790"
+    },
+    {
+      "type": "standard",
+      "title": "شكر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "أتمنى لك يوما جميلا :)"
+              },
+              {
+                "text": "دائما في الخدمة :)"
+              },
+              {
+                "text": "نرحب دوما بأسئلتكم واستفساراتكم :)"
+              },
+              {
+                "text": "أتمنى لك يوما سعيدا :)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#شكر",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1595844899031",
+      "previous_sibling": "node_10_1595803327041"
+    },
+    {
+      "type": "standard",
+      "title": "الشركة",
+      "metadata": {
+        "callout": {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "": ""
+          },
+          "result_variable": "webhook_result_1"
+        },
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#الشركة",
+      "dialog_node": "node_6_1595803750615",
+      "previous_sibling": "node_4_1595863949620"
+    },
+    {
+      "type": "standard",
+      "title": "لوحة التحكم",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#لوحة_التحكم",
+      "dialog_node": "node_7_1595803617777",
+      "previous_sibling": "node_6_1595803750615"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لم أفهم، يمكنك محاولة اعادة الصياغة."
+              },
+              {
+                "text": "هل يمكنك اعادة صياغة عبارتك؟ أنا لا أفهم."
+              },
+              {
+                "text": "لم أفهم قصدك."
+              },
+              {
+                "text": "هل يمكنك إعادة صياغة سؤالك؟ لم أستطع أن أفهم سؤالك."
+              },
+              {
+                "text": "أنا آسف، لم أفهم ماذا تقصد. هل يمكنك إعادة صياغة سؤالك؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_1_1595844899031",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لتصميم لوحة التحكم لغتي برمجة تم استخدامها:"
+              },
+              {
+                "text": "2- HTML- اللغة المستخدمة في تشكيل هيكلة الموقع"
+              },
+              {
+                "text": "1- CSS- اللغة توصيفية  تقوم بمنح موقع الويب شكله الجميل وتصميمه الفريد"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "@برمجة",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1595858605643",
+      "previous_sibling": "node_7_1595803617777"
+    },
+    {
+      "type": "frame",
+      "title": "الحجز",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ممتاز، لديك الآن حجز ل$number أشخاص لزيارة موقع شركة الأساليب الذكية، في $date، في الساعة $time في موقع الشركة."
+              },
+              {
+                "text": "هل يمكنني أن أساعدك في أي شيء آخر؟"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#حجز",
+      "dialog_node": "node_10_1595803327041",
+      "previous_sibling": "node_2_1595858605643"
+    },
+    {
+      "type": "standard",
+      "title": "التحية",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "مرحبا معك المساعد الآلي! كيف يمكنني مساعدتك؟ يمكنني أن أخبرك معلومات عن لوحة التحكم، معلومات عن الشركة\nالمبرمجة للوحة التحكم، إضافة إلى حجز موعد لزيارة الشركة.\n "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#التحية",
+      "dialog_node": "node_4_1595863949620",
+      "previous_sibling": "مرحبا"
+    },
+    {
+      "type": "standard",
+      "title": "مرحبا",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "مرحبا معك المساعد الآلي، كيف يمكنني مساعدتك؟ يمكنني أن أخبرك معلومات عن لوحة التحكم، معلومات عن الشركة\nالمبرمجة للوحة التحكم، إضافة إلى حجز موعد لزيارة الشركة."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "مرحبا"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "chat",
+  "language": "ar",
+  "description": ""
+}
